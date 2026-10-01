@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MYLUVYDUVYY🤍</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #ffeef5, #f3e8ff);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        color: #444;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 430px;
+        text-align: center;
+    }
+
+    h1 {
+        color: #d85c91;
+        margin-bottom: 5px;
+    }
+
+    .subtitle {
+        color: #777;
+        margin-bottom: 25px;
+    }
+
+    .package {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .card {
+        background: white;
+        border-radius: 18px;
+        padding: 20px 10px;
+        border: none;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        cursor: pointer;
+        font-size: 15px;
+        transition: 0.2s;
+    }
+
+    .card:hover {
+        transform: translateY(-3px);
+    }
+
+    .emoji {
+        font-size: 35px;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .message {
+        display: none;
+        background: white;
+        margin-top: 20px;
+        padding: 25px;
+        border-radius: 20px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        line-height: 1.6;
+    }
+
+    .message h2 {
+        color: #d85c91;
+    }
+
+    .close {
+        margin-top: 15px;
+        border: none;
+        background: #d85c91;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .footer {
+        margin-top: 25px;
+        font-size: 13px;
+        color: #888;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🩺 For myluvy 🤍</h1>
+
+    <p class="subtitle">
+        For my hardworking future nurse 💗
+    </p>
+
+    <div class="package">
+
+        <button class="card" onclick="showMessage('water')">
+            <span class="emoji">🥤</span>
+            Drink Water
+        </button>
+
+        <button class="card" onclick="showMessage('food')">
+            <span class="emoji">🍱</span>
+            Eat Something
+        </button>
+
+        <button class="card" onclick="showMessage('comfort')">
+            <span class="emoji">🫶</span>
+            Need Comfort?
+        </button>
+
+        <button class="card" onclick="showMessage('miss')">
+            <span class="emoji">🐧</span>
+            Miss Me?
+        </button>
+
+        <button class="card" onclick="showMessage('prayer')">
+            <span class="emoji">🙏</span>
+            Little Prayer
+        </button>
+
+        <button class="card" onclick="showMessage('after')">
+            <span class="emoji">🌙</span>
+            After Duty
+        </button>
+
+    </div>
+
+    <div id="message" class="message">
+        <h2 id="messageTitle"></h2>
+        <p id="messageText"></p>
+
+        <button class="close" onclick="closeMessage()">
+           Go back 🤍
+        </button>
+    </div>
+
+    <div class="footer">
+        Made with love by your hubbyy ❤️
+    </div>
+
+</div>
+
+<script>
+
+const messages = {
+
+    water: {
+        title: "🥤 Drink some water!",
+        text: "Please don't forget to drink water, bebe. You're busy taking care of other people, but you need to take care of yourself too. 🤍"
+    },
+
+    food: {
+        title: "🍱 Please eat!",
+        text: "I know duty can get really busy, but please eat when you get the chance, okay? Your bebe doesn't want you surviving on just air. 😭"
+    },
+
+    comfort: {
+        title: "🫶 Come here...",
+        text: "If duty is getting tiring, take a little breath. You don't have to be perfect. Just do what you can, one patient at a time. I'm already so proud of you."
+    },
+
+    miss: {
+        title: "🐧 Emergency Bebe!",
+        text: "If you miss me right now, imagine me giving you the biggest hug ever. I'm missing you too much. Keep going, my love. 🤍"
+    },
+
+    prayer: {
+        title: "🙏 A little prayer",
+        text: "Tatay, please guide my bebe throughout her duty. Give her strength, patience, wisdom and a peaceful heart. Keep her safe and remind her that she is loved. Amen. 🤍"
+    },
+
+    after: {
+        title: "🌙 You survived!",
+        text: "You made it through another duty!! I'm so proud of you, future nurse. Now please rest, eat, drink water and let your bebe love you a little. ❤️"
+    }
+
+};
+
+function showMessage(type) {
+
+    document.querySelector(".package").style.display = "none";
+
+    document.getElementById("message").style.display = "block";
+
+    document.getElementById("messageTitle").innerText =
+        messages[type].title;
+
+    document.getElementById("messageText").innerText =
+        messages[type].text;
+}
+
+function closeMessage() {
+
+    document.getElementById("message").style.display = "none";
+
+    document.querySelector(".package").style.display = "grid";
+}
+
+</script>
+
+</body>
+</html>
